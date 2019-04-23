@@ -1,0 +1,65 @@
+#-------------------------------------------------------------------------------
+# Brno University of Technology, Department of Radio Electronics
+#-------------------------------------------------------------------------------
+# Author(s): Tomas Fryza (tomas.fryza@vut.cz), Michal Kubicek
+# Date: 2019-02-14 07:17
+# Board: CPLD expansion board
+# Description: Constraints file with pin assignments.
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+# Buttons & switches
+#-------------------------------------------------------------------------------
+# Sixteen shared push buttons and slide switches
+#  0  ...  7       8  ... 15
+# +-+     +-+     +-+     +-+
+# | | ... | |     | | ... | | H
+# |.|     |.|     |.|     |.| L
+# +-+     +-+     +-+     +-+
+#
+#  0   4   8   12
+##  o   o   o   o   H: pressed
+##  o   o   o   o   L: released
+##  o   o   o   o
+##  o   o   o   o
+##  3   7   11  15
+#NET cpld_sw_i<0>        LOC = P9;
+#NET cpld_sw_i<1>        LOC = P10;
+#NET cpld_sw_i<2>        LOC = P6;
+#NET cpld_sw_i<3>        LOC = P7;
+#NET cpld_sw_i<4>        LOC = P4;
+#NET cpld_sw_i<5>        LOC = P5;
+#NET cpld_sw_i<6>        LOC = P2;
+#NET cpld_sw_i<7>        LOC = P3;
+#NET cpld_sw_i<8>        LOC = P140;
+#NET cpld_sw_i<9>        LOC = P142;
+#NET cpld_sw_i<10>       LOC = P138;
+#NET cpld_sw_i<11>       LOC = P139;
+#NET cpld_sw_i<12>       LOC = P135;
+#NET cpld_sw_i<13>       LOC = P136;
+#NET cpld_sw_i<14>       LOC = P133;
+#NET cpld_sw_i<15>       LOC = P134;
+#
+##-------------------------------------------------------------------------------
+## Sixteen discrete LEDs
+##-------------------------------------------------------------------------------
+##  0 ... 3   4 ... 7
+##  * * * *   * * * *   H: turn LED on
+##  * * * *   * * * *   L: turn LED off
+##  8 ... 9  10 ... 15
+NET cpld_led_o<0>       LOC = P118;
+NET cpld_led_o<1>       LOC = P119;
+NET cpld_led_o<2>       LOC = P116;
+NET cpld_led_o<3>       LOC = P117;
+NET cpld_led_o<4>       LOC = P114;
+NET cpld_led_o<5>       LOC = P115;
+NET cpld_led_o<6>       LOC = P112;
+NET cpld_led_o<7>       LOC = P113;
+NET cpld_led_o<8>       LOC = P103;
+NET cpld_led_o<9>       LOC = P104;
+NET cpld_led_o<10>      LOC = P101;
+NET cpld_led_o<11>      LOC = P102;
+NET cpld_led_o<12>      LOC = P98;
+NET cpld_led_o<13>      LOC = P100;
+NET cpld_led_o<14>      LOC = P96;
+NET cpld_led_o<15>      LOC = P97;
